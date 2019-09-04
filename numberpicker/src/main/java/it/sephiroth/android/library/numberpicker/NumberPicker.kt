@@ -35,7 +35,7 @@ class NumberPicker @JvmOverloads constructor(
         context: Context,
         attrs: AttributeSet? = null,
         defStyleAttr: Int = R.attr.pickerStyle,
-        defStyleRes: Int = R.style.NumberPicker_Filled) : LinearLayout(context, attrs, defStyleAttr, defStyleRes) {
+        defStyleRes: Int = R.style.NumberPicker_Filled) : LinearLayout(context, attrs, defStyleAttr) {
 
     interface OnNumberPickerChangeListener {
         fun onProgressChanged(numberPicker: NumberPicker, progress: Int, fromUser: Boolean)
