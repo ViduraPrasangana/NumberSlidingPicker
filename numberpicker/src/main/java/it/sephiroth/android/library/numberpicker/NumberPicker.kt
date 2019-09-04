@@ -16,6 +16,8 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.view.ContextThemeWrapper
 import androidx.appcompat.widget.AppCompatImageButton
+import androidx.core.view.marginLeft
+import androidx.core.view.setPadding
 import io.reactivex.Observable
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -235,12 +237,14 @@ class NumberPicker @JvmOverloads constructor(
 
         val params1 = LayoutParams(LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         params1.weight = 0f
+        params1.marginEnd = 20
 
         val params2 = LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT)
         params2.weight = 1f
 
         val params3 = LayoutParams(LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
         params3.weight = 0f
+        params3.marginStart = 20
 
         addView(downButton, params3)
         addView(editText, params2)
